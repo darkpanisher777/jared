@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // JavaScript to toggle the dropdown menus
+ const dropdowns = document.querySelectorAll(".dropdown");
+ 
+ dropdowns.forEach((dropdown) => {
+     dropdown.addEventListener("click", () => {
+         dropdown.querySelector(".dropdown-content").classList.toggle("show");
+     });
+ });
+ 
+ // Close the dropdown menus if the user clicks outside
+ window.onclick = function (event) {
+     if (!event.target.matches(".dropdown")) {
+         const dropdowns = document.querySelectorAll(".dropdown-content");
+         dropdowns.forEach((dropdownContent) => {
+             if (dropdownContent.classList.contains("show")) {
+                 dropdownContent.classList.remove("show");
+             }
+         });
+     }
+ };
+ 
+     </script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Profile Page</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><img src="assets/image/JADE.png" alt="logo"></div>
+        <ul> 
+            <li><a href="index.html">Home</a></li>
+            <li  <div class="dropdown">
+                <button class="dropbtn">Dropdown</button>
+                <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+                </div></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="download.htm">News</a></li>
+        </ul>
+    </div>
+    
+    <header>Profile</header>
+    <main>
+        <h1>Welcome to My Profile</h1>
+        <h2>Jared Aeron De Peralta Ellasos</h2>
+        <p>This is a simple profile page with some basic information about me.</p>
+        <ul>
+            <li><strong>Email:</strong> jaredaeron2303@gmail.com</li>
+            <li><strong>Location:</strong> Banayoyo, Ilocos Sur, PH</li>
+            <li><strong>Occupation:</strong> Web Developer</li>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2023 JADE. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
